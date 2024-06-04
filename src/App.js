@@ -1,5 +1,5 @@
 import React from "react";
-//import Test from "./test";
+import Test from "./test";
 import Parent from "./Parent";
 import Child from "./Child";
 function App() {
@@ -32,7 +32,10 @@ function App() {
 
   let demo=false;
   return(
-    <div>{demo?<Parent/>:<Child/>}</div>
+    <div>
+      <div>{<Test/>}</div>
+      {demo?<Parent/>:<Child/>}
+    </div>
   )
 }
 export default App;
