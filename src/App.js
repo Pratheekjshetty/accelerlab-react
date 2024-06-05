@@ -1,7 +1,8 @@
 import React from "react";
-import Test from "./test";
-import Parent from "./Parent";
-import Child from "./Child";
+//import Test from "./test";
+//import Parent from "./Parent";
+//import Child from "./Child";
+//const fruits =["apple","orange","mango"];
 function App() {
   // x=5;
   // let text="Goodbye";
@@ -30,12 +31,38 @@ function App() {
   //   </div>
   // );
 
-  let demo=false;
-  return(
-    <div>
-      <div>{<Test/>}</div>
-      {demo?<Parent/>:<Child/>}
-    </div>
-  )
+//   let demo=false;
+//   return(
+//     <div>
+//       <div>{<Test/>}</div>
+//       {demo?<Parent/>:<Child/>}
+//     </div>
+//   )
+// let x=5;
+// return(
+//   <div>{x<=10?"true":"false"}</div>
+// )
+const handleChange=(e)=>{
+  console.log(e.target.value);
 }
+const handleSubmit=(e)=>{
+  console.preventDefault();
+  // localStorage.setItem("name",name)
+  // localStorage.getItem("name")
+}
+return(<div>
+  {/* <ol type="A">
+    {fruits.map((fruits)=>(
+      <li>{fruits}</li>
+    ))}
+  </ol> */}
+  <form>
+    <label for="name" >Enter the name:</label>
+    <input type="text" name="name" onChange={handleChange}/>
+    <button type="submit" onClick={handleSubmit}>Submit</button>
+  </form>
+  
+</div>
+)
+ }
 export default App;
